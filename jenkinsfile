@@ -34,7 +34,8 @@ pipeline {
                     sh 'mvn deploy:deploy-file -Durl=file:///home/levente/appfordocker \
                                                                             -DrepositoryId=1 \
                                                                             -DgroupId=2 \
-                                                                            -DartifactId=3 \
+                                                                            -Dfile=file:///home/levente/appfordocker \
+                                                                            -DartifactId=3 \z
                                                                             -Dversion=version1.0 \
                                                                             -Dpackaging=jar \
                                                                             -DgeneratePom=false'
