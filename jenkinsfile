@@ -31,7 +31,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 withMaven(maven : 'maven') {
-                    sh 'mvn deploy -DgeneratePom=false'
+                    sh 'mvn deploy -DaltDeploymentRepository=internal.repo::default::file:///home/levente/deploy/app'
                 }
             }
         }
