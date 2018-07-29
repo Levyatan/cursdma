@@ -31,14 +31,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 withMaven(maven : 'maven') {
-                    sh 'mvn deploy:deploy-file -Durl=file:///home/levente/appfordocker \
-                                                                            -DrepositoryId=1 \
-                                                                            -DgroupId=2 \
-                                                                            -Dfile= \
-                                                                            -DartifactId=3 \
-                                                                            -Dversion=version1.0 \
-                                                                            -Dpackaging=jar \
-                                                                            -DgeneratePom=false'
+                    sh 'mvn deploy -DgeneratePom=false'
                 }
             }
         }
