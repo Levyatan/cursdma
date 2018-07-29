@@ -35,7 +35,7 @@ pipeline {
                                                                             -DrepositoryId=1 \
                                                                             -DgroupId=2 \
                                                                             -Dfile=file:///home/levente/appfordocker \
-                                                                            -DartifactId=3 \z
+                                                                            -DartifactId=3 \
                                                                             -Dversion=version1.0 \
                                                                             -Dpackaging=jar \
                                                                             -DgeneratePom=false'
