@@ -33,7 +33,6 @@ pipeline {
                 withMaven(maven : 'maven') {
                     sh 'mvn deploy:deploy-file -Durl=file:///home/levente/appfordocker \
                                                                             -DrepositoryId=1 \
-                                                                            -Dfile=path-to-your-artifact-jar \
                                                                             -DgroupId=2 \
                                                                             -DartifactId=3 \
                                                                             -Dversion=version1.0 \
