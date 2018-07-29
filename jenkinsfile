@@ -5,6 +5,10 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
+                git branch: 'master',
+                     credentialsId: '652a3df0-242f-487c-9617-337294ca27a4',
+                     url: 'https://dmatech@bitbucket.org/dmadevelopment/wms.git/'
+                             
                 withMaven(maven : 'maven') {
                     sh 'mvn clean compile'
                 }
